@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hangman!</title>
+</head>
+
+<body>
+<script>
+
+    function pickWord() {
+        let words = ["dragon", "goose", "pancake"];
+        let rndWordIndex = Math.floor(Math.random() * words.length);
+        return words[rndWordIndex];
+    }
+
+    function setupAnswerArray(word) {
+        answerArray = [];
+        for (let i = 0; i < word.length; i++) {
+            answerArray.push("_");
+        }
+        return answerArray;
+    }
+
+    function showPlayProgress(answerArray) {
+        alert("So far you have:\n" + answerArray.join(" "));
+    }
+
+    function getGuess() {
+        return prompt("What letter would you like to guess next?")
+    }
+
+    function updateGameState(guess, word, answerArray) {
+        // number of correct guesses (0 or 1)
+        let numberCorrect = 0;
+        for (let i = 0; i < word.length; i++) {
+            if (word[i] === guess) {
+                if (answerArray[i] !== guess) {
+                    answerArray[i] = guess;
+                    numberCorrect++;
+                }
+            }
+        }
+        return numberCorrect;
+    }
+
+    let word = pickWord();
+    let answerArray = setupAnswerArray(word);
+    let remainingLetters = word.length;
+
+    while(remainingLetters > 0) {
+        showPlayProgress(answerArray);
+        let guess = getGuess();
+        if (guess === null) {
+            break;
+        } else if (guess.length !== 1) {
+            alert("Please enter a single letter.");
+        } else {
+            let correctGuesses = updateGameState(guess, word, answerArray);
+            remainingLetters -= correctGuesses;
+        }
+    }
+</script>
+</body>
+</html>

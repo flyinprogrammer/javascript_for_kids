@@ -1,4 +1,4 @@
-var landmarks = [];
+let landmarks = [];
 landmarks.push("My house");
 landmarks.push("Front path");
 landmarks.push("Flickering streetlamp");
@@ -8,13 +8,13 @@ landmarks.push("Cat rescue center");
 landmarks.push("My old school");
 landmarks.push("My friend's house");
 
-// for (i = 0; i < landmarks.length; i++) {
+// for (let i = 0; i < landmarks.length; i++) {
 //     console.log(landmarks.length);
 //     console.log("i is: " + i);
 //     console.log(landmarks.pop());
 // }
 
-var originalLandmarksLength = landmarks.length
-for (i = 0; i < originalLandmarksLength; i++) {
+let originalLandmarksLength = landmarks.length
+for (let i = 0; i < originalLandmarksLength; i++) {
     console.log(landmarks.pop());
 }

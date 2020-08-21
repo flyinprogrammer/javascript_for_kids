@@ -1,6 +1,6 @@
-var isWeekend = false;
-var hadShower = true;
-var hasApple = false;
-var hasOrange = true;
-var shouldGoToSchool = !isWeekend && hadShower && (hasApple || hasOrange);
+let isWeekend = false;
+let hadShower = true;
+let hasApple = false;
+let hasOrange = true;
+let shouldGoToSchool = !isWeekend && hadShower && (hasApple || hasOrange);
 console.log(shouldGoToSchool);

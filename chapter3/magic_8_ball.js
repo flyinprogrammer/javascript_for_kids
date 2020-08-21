@@ -10,11 +10,11 @@ console.log(Math.floor(Math.random() * 10));
 console.log(Math.floor(Math.random() * 10));
 console.log(Math.floor(Math.random() * 10));
 
-var randomWords = ["Explosion", "Cave", "Princess", "Pen"];
-var randomIndex = Math.floor(Math.random() * randomWords.length);
+let randomWords = ["Explosion", "Cave", "Princess", "Pen"];
+let randomIndex = Math.floor(Math.random() * randomWords.length);
 console.log(randomWords[randomIndex]);
 
-var phrases = [
+let phrases = [
     "That sounds good",
     "Yes, you should definitely do that",
     "I'm not sure that's a great idea",
@@ -26,12 +26,12 @@ console.log(phrases[Math.floor(Math.random() * phrases.length)]);
 console.log(phrases[Math.floor(Math.random() * phrases.length)]);
 console.log(phrases[Math.floor(Math.random() * phrases.length)]);
 
-var randomBodyParts = ['Face', 'Nose', 'Hair'];
-var randomAdjectives = ['Smelly', 'Boring', 'Stupid'];
-var randomWords = ['Fly', 'Marmot', 'Stick', 'Monkey', 'Rat'];
+let randomBodyParts = ['Face', 'Nose', 'Hair'];
+let randomAdjectives = ['Smelly', 'Boring', 'Stupid'];
+randomWords = ['Fly', 'Marmot', 'Stick', 'Monkey', 'Rat'];
 
-var rndBodyPart = randomBodyParts[Math.floor(Math.random() * randomBodyParts.length)]
-var rndAdj = randomAdjectives[Math.floor(Math.random() * randomAdjectives.length)]
-var rndWord = randomWords[Math.floor(Math.random() * randomWords.length)]
+let rndBodyPart = randomBodyParts[Math.floor(Math.random() * randomBodyParts.length)]
+let rndAdj = randomAdjectives[Math.floor(Math.random() * randomAdjectives.length)]
+let rndWord = randomWords[Math.floor(Math.random() * randomWords.length)]
 
 console.log("Your " + rndBodyPart + " is like a " + rndAdj + " " + rndWord + "!!!");

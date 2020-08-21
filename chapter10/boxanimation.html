@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Playing with the DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="heading">Hello World!</h1>
+<script>
+    let leftOffset = 0;
+    let topOffset = 0;
+    let goingLeft = true;
+    let goingUp = false;
+    let goingRight = false;
+    let goingDown = false;
+
+    let pixelJump = 1;
+    let intervalUpdate = 30;
+    let heading = $("#heading");
+    heading.offset({left: leftOffset}).offset({top: topOffset});
+
+    let movingHeading = function () {
+        if (goingLeft) {
+            if (leftOffset >= 200) {
+                goingLeft = false;
+                goingDown = true;
+            } else {
+                heading.offset({left: leftOffset});
+                leftOffset+=pixelJump;
+            }
+        } else if (goingRight) {
+            if (leftOffset <= 0) {
+                goingRight = false;
+                goingUp = true;
+            } else {
+                heading.offset({left: leftOffset});
+                leftOffset-=pixelJump;
+            }
+        } else if (goingDown) {
+            if (topOffset >= 200) {
+                goingDown = false;
+                goingRight = true;
+            } else {
+                heading.offset({top: topOffset});
+                topOffset+=pixelJump;
+            }
+        } else if (goingUp) {
+            if (topOffset <= 0) {
+                goingUp = false;
+                goingLeft = true;
+            } else {
+                heading.offset({top: topOffset});
+                topOffset-=pixelJump;
+            }
+        }
+    };
+    let intervalID = setInterval(movingHeading, intervalUpdate);
+
+    let clickHandler = function () {
+        intervalUpdate *= 0.95;
+        if (pixelJump < 10) {
+            pixelJump += 1;
+        }
+        console.log(intervalUpdate + " " + pixelJump);
+        clearInterval(intervalID);
+        intervalID = setInterval(movingHeading, intervalUpdate);
+    }
+    heading.click(clickHandler);
+</script>
+
+</body>
+</html>

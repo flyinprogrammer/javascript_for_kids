@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Playing with the DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="heading">Hello World!</h1>
+<script>
+    $("html").mousemove(function (event){
+        $("#heading").offset({
+            left: event.pageX,
+            top: event.pageY
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Playing with the DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="main-heading">Hello World!</h1>
+<script>
+    let timeUp = function () {
+        alert("Time is up!");
+    }
+    let timeUpId = setTimeout(timeUp, 3000);
+    clearTimeout(timeUpId);
+
+    let counter = 0;
+    let printMsg = function () {
+        console.log("You have been staring at your console for " + counter + " seconds");
+        counter++;
+    };
+
+    let intervalId = setInterval(printMsg, 1000);
+    setTimeout(function (){
+        clearInterval(intervalId)
+        console.log("cleared our interval")
+    }, 5000);
+
+</script>
+
+</body>
+</html>

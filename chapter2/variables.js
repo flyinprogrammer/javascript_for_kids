@@ -1,30 +1,30 @@
-var nick;
+let nick;
 console.log(nick);
 
-var age = 12;
+let age = 12;
 console.log(age);
 
 age = 13;
 console.log(age);
 
-var numberOfSiblings = 1 + 3;
-var numberOfCandies = 8.00;
+let numberOfSiblings = 1 + 3;
+let numberOfCandies = 8.00;
 console.log("number of candies per sibling: " + numberOfCandies / numberOfSiblings);
 
 // console.log(numberOfcandies / numberOfSiblings);
 
-var secondsInAMinute = 60;
-var minutesInAnHour = 60;
-var secondsInAnHour = secondsInAMinute * minutesInAnHour;
+let secondsInAMinute = 60;
+let minutesInAnHour = 60;
+let secondsInAnHour = secondsInAMinute * minutesInAnHour;
 console.log(secondsInAnHour);
 
-var hoursInADay = 24;
-var secondsInADay = secondsInAnHour * hoursInADay;
+let hoursInADay = 24;
+let secondsInADay = secondsInAnHour * hoursInADay;
 console.log(secondsInADay)
 
-var daysInAYear = 365;
-var secondsInAYear = secondsInADay * daysInAYear;
+let daysInAYear = 365;
+let secondsInAYear = secondsInADay * daysInAYear;
 console.log(secondsInAYear);
 
-var age = 30;
+age = 30;
 console.log(age * secondsInAYear);

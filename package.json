@@ -1,0 +1,24 @@
+{
+  "name": "javascript_for_kids",
+  "version": "0.0.0",
+  "description": "A repo of code for this book.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .html,.js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyinprogrammer/javascript_for_kids.git"
+  },
+  "author": "flyinprogrammer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flyinprogrammer/javascript_for_kids/issues"
+  },
+  "homepage": "https://github.com/flyinprogrammer/javascript_for_kids#readme",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-plugin-html": "^6.0.3"
+  }
+}

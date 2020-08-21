@@ -6,33 +6,33 @@
 <body>
 <h1>Welcome to hangman!</h1>
 <script>
-    var words = [
+    let words = [
         "javascript",
         "monkey",
         "amazing",
         "pancake"
     ];
-    var word = words[Math.floor(Math.random() * words.length)];
-    var answer = [];
-    for (var i = 0; i < word.length; i++) {
+    let word = words[Math.floor(Math.random() * words.length)];
+    let answer = [];
+    for (let i = 0; i < word.length; i++) {
         answer.push("_");
     }
-    var remainingLetters = word.length;
+    let remainingLetters = word.length;
 
-    var guessedLetters = [];
+    let guessedLetters = [];
     while ( remainingLetters > 0 ) {
         alert(answer.join(" "));
 
-        var guess = prompt("Guess a letter, or click Cancel to stop playing." + "\n Letters previously guessed: \n" + guessedLetters);
+        let guess = prompt("Guess a letter, or click Cancel to stop playing." + "\n Letters previously guessed: \n" + guessedLetters);
         if (guess === null ) {
             break;
         } else if (guess.length !== 1) {
             alert("Please enter a single letter.")
         } else {
-           var guessLower = guess.toLowerCase();
+           let guessLower = guess.toLowerCase();
             if (!(guessedLetters.includes(guessLower))) {
                 guessedLetters.push(guessLower);
-                for (var j = 0; j < word.length; j++) {
+                for (let j = 0; j < word.length; j++) {
                     if (word[j] === guess) {
                         answer[j] = guess;
                         remainingLetters--;

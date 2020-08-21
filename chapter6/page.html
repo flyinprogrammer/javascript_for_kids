@@ -7,12 +7,12 @@
     <h1>Hello world!</h1>
     <p>My first web page.</p>
     <script>
-        var message = "Hello world!";
+        let message = "Hello world!";
         console.log(message);
 
-        var lemonChicken = false;
-        var beefWithBlackBean = true;
-        var sweetAndSourPork = true;
+        let lemonChicken = false;
+        let beefWithBlackBean = true;
+        let sweetAndSourPork = true;
 
         if (lemonChicken) {
             console.log("Great! I'm having lemon chicken!");
@@ -24,7 +24,7 @@
             console.log("Well, I guess I'll have rice then.");
         }
 
-        var name = "mARia";
+        let name = "mARia";
 
         if (name.toLowerCase() === "alan") {
             console.log("Hello, me!");
@@ -36,52 +36,52 @@
             console.log("Hello, stranger!");
         }
 
-        var sheepCounted = 1;
+        let sheepCounted = 1;
         while(sheepCounted < 11) {
             console.log("I have counted " + sheepCounted + " sheep!");
             sheepCounted++;
         }
         console.log("Zzzzzzzzzzzz")
 
-        for(sheepCounted = 1; sheepCounted < 11; sheepCounted++) {
+        for (sheepCounted = 1; sheepCounted < 11; sheepCounted++) {
             console.log("I have counted " + sheepCounted + " sheep!");
         }
         console.log("ZZzzzzzzzz");
 
-        for (x = 3; x < 10000; x *= 3) {
+        for (let x = 3; x < 10000; x *= 3) {
             console.log(x);
         }
 
-        x = 3
+        let x = 3;
         while (x < 10000) {
             console.log(x);
             x *= 3;
         }
 
-        var animals = ["Cat", "Fish", "Lemur", "Komodo Dragon"];
-        for (i = 0; i < animals.length; i++) {
+        let animals = ["Cat", "Fish", "Lemur", "Komodo Dragon"];
+        for (let i = 0; i < animals.length; i++) {
             animals[i] = "Awesome " + animals[i];
         }
         console.log(animals);
 
-        var alphabet = "abcdefghijklmnopqrstuvwxzy"
-        var rndString = ""
-        for (i = 0; i < 5; i++) {
-            rndLtr = alphabet[Math.floor(Math.random() * alphabet.length)];
+        let alphabet = "abcdefghijklmnopqrstuvwxzy"
+        let rndString = ""
+        for (let i = 0; i < 5; i++) {
+            let rndLtr = alphabet[Math.floor(Math.random() * alphabet.length)];
             rndString += rndLtr;
         }
         console.log(rndString);
 
-        var hackermap = {
+        let hackermap = {
             a: "4",
             e: "3",
             i: "1",
             o: "0"
         }
-        var input = "javascript is awesome";
-        var output = "";
-        for (i = 0; i < input.length; i++) {
-            lowerCaseLetter = input[i].toLowerCase();
+        let input = "javascript is awesome";
+        let output = "";
+        for (let i = 0; i < input.length; i++) {
+            let lowerCaseLetter = input[i].toLowerCase();
             if (lowerCaseLetter in hackermap) {
                 output += hackermap[lowerCaseLetter];
             } else {

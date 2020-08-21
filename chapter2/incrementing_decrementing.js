@@ -1,7 +1,7 @@
 
 
-var highfives = 0;
-var highfivesReturn = 0;
+let highfives = 0;
+let highfivesReturn = 0;
 
 console.log("hF: " + highfives);
 console.log("hR: " + highfivesReturn);
@@ -29,17 +29,17 @@ console.log(highfives++);
 console.log(highfives++);
 console.log(highfives);
 
-var x = 10;
+let x = 10;
 x = x + 5;
 console.log(x);
 
-var score = 10;
+let score = 10;
 score += 7;
 console.log(score);
 score -= 3;
 console.log(score);
 
-var balloons = 10
+let balloons = 10
 balloons *= 2;
 console.log(balloons);
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Playing with the DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="main-heading">Hello World!</h1>
+<script>
+    $("h1").text("My friends");
+    let friends = ["Jerrica Domino", "Venetta Cottle", "Hank Farrer", "Ahmad Fazekas"]
+    for (let i = 0; i < friends.length; i++) {
+        $("body").append("<p id=\"friend-" + i + "\">" + friends[i] + "</p>");
+        $("#friend-"+i).hide();
+    }
+    $("p").each(function(index) {
+        let minimumOpacity= Math.max(index / friends.length, 0.1);
+        let opacity = Math.min(minimumOpacity, 1);
+        $(this).delay(1000*index).fadeTo(1000, opacity, function(){$(this).append(" smells!")});
+    });
+</script>
+
+</body>
+</html>

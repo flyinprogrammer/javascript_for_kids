@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Playing with the DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="heading">Hello World!</h1>
+<script>
+    let leftOffset = 0;
+    let movingHeading = function () {
+        $("#heading").offset({left: leftOffset});
+        leftOffset++;
+        if (leftOffset > 200) {
+            leftOffset = 0;
+        }
+    };
+    setInterval(movingHeading, 30);
+
+    let clickHandler = function (event) {
+        console.log("Clickk! " + event.pageX + " " + event.pageY);
+        leftOffset = 0;
+    }
+    $("#heading").click(clickHandler);
+</script>
+
+</body>
+</html>

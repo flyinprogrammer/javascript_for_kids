@@ -1,10 +1,10 @@
-var cat1 = {
+let cat1 = {
     "legs": 3,
     "name": "Harmony",
     "color": "Tortoiseshell"
 };
 
-var cat2 = {
+let cat2 = {
     legs: 3,
     name: "Tom",
     color: "Blue"
@@ -23,7 +23,7 @@ cat1.color = "Green";
 console.log(cat1.color);
 
 
-var scores = {
+let scores = {
   bill: 0,
   bob: 0,
   sally: 0
@@ -36,7 +36,7 @@ scores.bob -= 1;
 
 console.log(scores);
 
-var myCrazyObject = {
+let myCrazyObject = {
     "name": "A ridiculous object",
     "some array": [7,9, {purpose: "confusion", number: 123}, 3.3],
     "random animal": "Banana Shark"
