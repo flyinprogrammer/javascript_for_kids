@@ -6,10 +6,73 @@
 </head>
 <body>
 <canvas id="canvas" width="200" height="200"></canvas>
+<canvas id="circles" width="200" height="200"></canvas>
+<canvas id="rainbow" width="200" height="200"></canvas>
 <script>
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
-    ctx.fillRect(0,0,10,10);
+    ctx.fillStyle = "red";
+    for (let i = 0 ; i < 8 ; i++) {
+        ctx.fillRect(i*10, i*10, 10, 10);
+    }
+    ctx.strokeStyle = "DeepPink";
+    ctx.lineWidth = 4;
+    ctx.strokeRect(4,90, 100, 20);
+
+    ctx.strokeStyle = "Turquoise";
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.moveTo(4,124);
+    ctx.lineTo(64, 184);
+    ctx.moveTo(4, 184);
+    ctx.lineTo(64, 124);
+    ctx.stroke();
+
+    ctx.fillStyle = "SkyBlue";
+    ctx.beginPath();
+    ctx.moveTo(100,190);
+    ctx.lineTo(100,150);
+    ctx.lineTo(130,120);
+    ctx.lineTo(160,150);
+    ctx.lineTo(160,190);
+    ctx.lineTo(100,190);
+    ctx.fill();
+
+    let circlesCanvas = document.getElementById("circles");
+    let circleCtx = circlesCanvas.getContext("2d");
+
+    circleCtx.lineWidth = 2;
+    circleCtx.strokeStyle = "Green";
+
+    circleCtx.beginPath();
+    circleCtx.arc(50,50,20,0, Math.PI / 2, false);
+    circleCtx.stroke();
+
+    circleCtx.beginPath();
+    circleCtx.arc(100, 50, 20, 0, Math.PI, false);
+    circleCtx.stroke();
+
+    circleCtx.beginPath();
+    circleCtx.arc(150, 50, 20, 0, Math.PI * 2, false);
+    circleCtx.stroke();
+
+    let rainbow = document.getElementById("rainbow");
+    let rCtx = rainbow.getContext("2d");
+    rCtx.lineWidth = 4;
+    function circle(ctx, color, x, y, radius) {
+        ctx.strokeStyle = color;
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI*2, false);
+        ctx.stroke();
+    }
+
+    circle(rCtx, "Red", 100, 100, 10);
+    circle(rCtx, "Orange", 100, 100, 20);
+    circle(rCtx, "Yellow", 100, 100, 30);
+    circle(rCtx, "Green", 100, 100, 40);
+    circle(rCtx, "Blue", 100, 100, 50);
+    circle(rCtx, "Purple", 100, 100, 60);
+
 </script>
 </body>
 </html>
